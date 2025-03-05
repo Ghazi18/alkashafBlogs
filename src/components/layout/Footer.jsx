@@ -186,7 +186,7 @@ export default function Footer() {
           </li>
         </ul>
         <div className="flex justify-center mt-4">
-      <p className="text-xs text-gray-400 font-bold ">"جميع الحقوق محفوظة للكشاف. لا يجوز نسخ أو إعادة نشر أي جزء من هذا المحتوى دون إذن مسبق. © 2025"</p>
+      <p className="text-xs text-gray-400 font-bold text-center ">"جميع الحقوق محفوظة للكشاف. لا يجوز نسخ أو إعادة نشر أي جزء من هذا المحتوى دون إذن مسبق. © 2025"</p>
         </div>
       </div>
     </footer>

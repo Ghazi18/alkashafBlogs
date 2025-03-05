@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="bg-white shadow-md">
       <div className="mx-auto flex h-20 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
@@ -8,15 +11,19 @@ export default function NavBar() {
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
               <Link
-                to={"/"}
+              target="_blank"
+                to={"https://alkashaf.com"}
                 className="block rounded-3xl text-purple-600 px-5 py-2.5 text-sm font-medium transition border border-purple-600"
-                href="#"
               >
                 الذهاب لموقع الكشاف
               </Link>
             </div>
 
-            <button className="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
+            {/* Toggle button for mobile menu */}
+            <button
+              className="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
               <span className="sr-only">Toggle menu</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,18 +36,54 @@ export default function NavBar() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
+                  d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
                 />
               </svg>
             </button>
           </div>
+
+          {/* Mobile menu */}
+          {isMenuOpen && (
+            <nav className="absolute top-20 left-0 w-full bg-white shadow-md md:hidden">
+              <ul className="flex flex-col items-center gap-4 p-4 text-md font-bold">
+                <li>
+                  <Link
+                    to={"/ContactUs"}
+                    className="text-purple-600 transition hover:text-purple-600/75"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    تواصل معنا
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to={"/AboutUs"}
+                    className="text-purple-600 transition hover:text-purple-600/75"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    من نحن
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to={"/"}
+                    className="text-purple-600 transition hover:text-purple-600/75"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    الرئيسة
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          )}
+
+          {/* Desktop menu */}
           <nav aria-label="Global" className="hidden md:block">
             <ul className="flex items-center gap-10 text-md font-bold">
               <li>
                 <Link
                   to={"/ContactUs"}
                   className="text-purple-600 transition hover:text-purple-600/75"
-                  href="#"
                 >
                   تواصل معنا
                 </Link>
@@ -49,7 +92,6 @@ export default function NavBar() {
                 <Link
                   to={"/AboutUs"}
                   className="text-purple-600 transition hover:text-purple-600/75"
-                  href="#"
                 >
                   من نحن
                 </Link>
@@ -58,7 +100,6 @@ export default function NavBar() {
                 <Link
                   to={"/"}
                   className="text-purple-600 transition hover:text-purple-600/75"
-                  href="#"
                 >
                   الرئيسة
                 </Link>
@@ -67,7 +108,7 @@ export default function NavBar() {
           </nav>
         </div>
 
-        <a className="block text-teal-600" href="#">
+        <Link to={"/"} className="block text-teal-600">
           <span className="sr-only">Home</span>
           <svg
             className="h-8"
@@ -80,7 +121,7 @@ export default function NavBar() {
               fill="currentColor"
             />
           </svg>
-        </a>
+        </Link>
       </div>
     </header>
   );

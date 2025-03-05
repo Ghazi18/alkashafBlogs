@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./ArbFONTS-Geeza-Pro-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'MyFont';
+    src: url('./geeza-pro-bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'MyFont', sans-serif;
+  }
+  

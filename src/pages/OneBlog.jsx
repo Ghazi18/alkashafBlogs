@@ -41,8 +41,8 @@ export default function OneBlog() {
 
   return (
     <div className="max-w-3xl mx-auto p-5 text-center">
-      <h1 className="text-4xl font-bold">{blog.title}</h1>
-      <p className="text-gray-600 mt-8 text-md">{blog.intro}</p>
+      <h1 className="text-5xl font-bold">{blog.title}</h1>
+      <p className="text-gray-600 mt-8 text-md text-lg">{blog.intro}</p>
 
       {/* Social Media Icons */}
       <div className="flex gap-3 my-3 justify-center">
@@ -159,10 +159,6 @@ export default function OneBlog() {
           </li>
         </ul>
       </div>
-      <div className=" my-8 flex flex-col gap-2">
-        <span className="font-bold">{blog.author}</span>
-        <span className="text-gray-500 text-sm">{blog.date}</span>
-      </div>
 
       {/* Image */}
       <img
@@ -171,10 +167,15 @@ export default function OneBlog() {
         className="w-full h-64 object-cover rounded-lg my-4"
       />
 
+      <div className=" my-8 flex flex-col gap-2">
+        <span className="font-bold text-lg">{blog.author}</span>
+        <span className="text-gray-500 text-md">{blog.date}</span>
+      </div>
+
       <hr className="my-8 border-t border-gray-300" />
 
       {/* Blog Content */}
-      <div className="mt-4 text-md  leading-8 text-right space-y-4">
+      <div className="mt-4 text-lg  leading-8 text-right space-y-4">
         {blog.body.split(".").map((paragraph, index) =>
           paragraph.trim() ? (
             <p className="font-normal" key={index}>
