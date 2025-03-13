@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto pb-2" dir="rtl">
       <h1 className="text-4xl font-bold mb-10 md:mb-16 text-right">
-        أحدث المقالات
+        مدونة الكشـــاف
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
