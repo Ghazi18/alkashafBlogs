@@ -48,7 +48,7 @@ export default function NavBar() {
 
           {/* Mobile menu */}
           {isMenuOpen && (
-            <nav className="absolute top-20 left-0 w-full bg-white shadow-md md:hidden">
+            <nav className="absolute top-20 left-0 w-full bg-gray-900 shadow-md md:hidden">
               <ul className="flex flex-col items-center gap-4 p-4 text-md font-bold">
                 <li>
                   <Link

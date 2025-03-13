@@ -16,8 +16,16 @@ export default function OneBlog() {
 
   return (
     <div className="max-w-3xl mx-auto p-5 text-center">
-      <h1 className="text-5xl font-bold">{blog.title}</h1>
-      <p className="text-gray-600 mt-8 text-md text-lg text-right">
+      <h1
+        style={{ direction: "rtl", unicodeBidi: "plaintext" }}
+        className="text-5xl font-bold"
+      >
+        {blog.title}
+      </h1>
+      <p
+        style={{ direction: "rtl", unicodeBidi: "plaintext" }}
+        className="text-gray-600 mt-8 text-md text-lg text-right"
+      >
         {blog.intro}
       </p>
 
