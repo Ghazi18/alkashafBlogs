@@ -26,7 +26,7 @@ export default function OneBlog() {
         style={{ direction: "rtl", unicodeBidi: "plaintext" }}
         className=" mt-8 text-md  text-xl  leading-9 text-right font-normal"
       >
-        {blog.intro}
+        {blog.firstParagraph}
       </p>
 
       {/* Social Media Icons */}
