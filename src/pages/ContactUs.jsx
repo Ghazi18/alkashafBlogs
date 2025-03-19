@@ -7,14 +7,14 @@ export default function ContactUs() {
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            تواصل معنا
+          للنقد أو الاقتراحات أياً كانت، تواصل معنا وسنجيبك في أقرب وقت ان شاء الله
           </h2>
-          <p className="mt-4 text-gray-500 sm:text-xl">
+          {/* <p className="mt-4 text-gray-500 sm:text-xl">
             متواجدون هنا دائما لخدمتكم ولسبل التعاون ولخدمة لغتنا الام
-          </p>
+          </p> */}
         </div>
 
-        <dl className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* <dl className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col items-center rounded-lg bg-blue-50 px-4 py-8 text-center">
             <FaInstagram className="text-pink-500 text-5xl" />
             <dt className="mt-4 text-lg font-medium text-gray-500">
@@ -31,7 +31,7 @@ export default function ContactUs() {
             <FaGlobe className="text-gray-800 text-5xl" />
             <dt className="mt-4 text-lg font-medium text-gray-500">GitHub</dt>
           </div>
-        </dl>
+        </dl> */}
       </div>
       {/*
   Heads up! 👋
@@ -40,9 +40,9 @@ export default function ContactUs() {
     - @tailwindcss/forms
 */}
 
-      <section className="bg-gray-100">
-        <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+      <section className="">
+        <div className="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 lg:px-8">
+          <div className=" flex justify-center gap-x-16 gap-y-8  ">
             {/* Form Section */}
             <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12 text-right">
               <form action="#" className="space-y-4">
@@ -108,7 +108,7 @@ export default function ContactUs() {
             </div>
 
             {/* Contact Info Section */}
-            <div className="lg:col-span-2 lg:py-12 text-right">
+            {/* <div className="lg:col-span-2 lg:py-12 text-right">
               <p className="max-w-xl text-lg">
                 هو منصة متخصصة في تقديم خدمة المعاجم العربية، حيث يوفر
                 للمستخدمين إمكانية البحث عن معاني الكلمات والمصطلحات باللغة
@@ -127,7 +127,7 @@ export default function ContactUs() {
                   المملكة العربية السعودية , جدة حي الروضة
                 </address>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

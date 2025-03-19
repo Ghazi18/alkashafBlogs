@@ -24,7 +24,7 @@ export default function OneBlog() {
       </h1>
       <p
         style={{ direction: "rtl", unicodeBidi: "plaintext" }}
-        className="text-gray-600 mt-8 text-md text-lg text-right"
+        className=" mt-8 text-md  text-xl  leading-9 text-right font-normal"
       >
         {blog.intro}
       </p>

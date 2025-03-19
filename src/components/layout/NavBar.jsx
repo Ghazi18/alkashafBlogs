@@ -9,17 +9,6 @@ export default function NavBar() {
       <div className="mx-auto flex h-20 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-1 items-center justify-end md:justify-between">
           <div className="flex items-center gap-4">
-            <div className="sm:flex sm:gap-4">
-              <Link
-                target="_blank"
-                to={"https://alkashaf.com"}
-                className="block rounded-3xl text-white px-5 py-2.5 text-sm font-medium transition hover:text-gray-200 border border-white"
-              >
-                الذهاب لموقع الكشاف
-              </Link>
-            </div>
-
-            {/* Toggle button for mobile menu */}
             <button
               className="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-200 hover:text-gray-200ay-600/75 md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -44,6 +33,17 @@ export default function NavBar() {
                 />
               </svg>
             </button>
+            <div className="sm:flex sm:gap-4">
+              <Link
+                target="_blank"
+                to={"https://alkashaf.com"}
+                className="block rounded-3xl text-white px-5 py-2.5 text-sm font-medium transition hover:text-gray-200 border border-white"
+              >
+                انتقل الى المعجم
+              </Link>
+            </div>
+
+            {/* Toggle button for mobile menu */}
           </div>
 
           {/* Mobile menu */}
@@ -65,7 +65,7 @@ export default function NavBar() {
                     className="text-white transition hover:text-gray-200 "
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    من نحن
+                    عن الكشاف
                   </Link>
                 </li>
                 <li>
@@ -97,7 +97,7 @@ export default function NavBar() {
                   to={"/AboutUs"}
                   className="text-white transition hover:text-gray-200 "
                 >
-                  من نحن
+                  عن الكشاف
                 </Link>
               </li>
               <li>
@@ -112,7 +112,10 @@ export default function NavBar() {
           </nav>
         </div>
 
-        <Link to={"/"} className="text-white transition hover:text-gray-200 text-3xl font-bold ">
+        <Link
+          to={"/"}
+          className="text-white transition hover:text-gray-200 text-3xl font-bold "
+        >
           الكشـــاف
         </Link>
       </div>
