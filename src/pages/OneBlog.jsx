@@ -1,13 +1,11 @@
 import { useParams } from "react-router-dom";
 import { blogs } from "../constants/blogsData"; // Importing shared blogs data
 import { FaInstagram, FaGlobe } from "react-icons/fa";
-
 import { FaXTwitter } from "react-icons/fa6";
 import NotFound from "./NotFound";
 
 export default function OneBlog() {
   const { id } = useParams();
-
   const blog = blogs.find((b) => b.id === parseInt(id));
 
   if (!blog) {
@@ -22,12 +20,19 @@ export default function OneBlog() {
       >
         {blog.title}
       </h1>
-      <p
+
+      <div
         style={{ direction: "rtl", unicodeBidi: "plaintext" }}
-        className=" mt-8 text-md  text-xl  leading-9 text-right font-normal"
+        className="mt-8 text-md text-xl leading-9 text-right font-normal space-y-4"
       >
-        {blog.firstParagraph}
-      </p>
+        {blog.firstParagraph.split("\n\n").map((paragraph, index) =>
+          paragraph.trim() ? (
+            <p className="font-normal" key={index}>
+              {paragraph}
+            </p>
+          ) : null
+        )}
+      </div>
 
       {/* Social Media Icons */}
       <div className="flex gap-3 my-3 justify-center">
@@ -70,14 +75,20 @@ export default function OneBlog() {
         </ul>
       </div>
 
-      {/* Image */}
+      {/* Image Placeholder */}
+      {/* 
       <img
         src={blog.image}
         alt={blog.title}
         className="w-full h-64 object-cover rounded-lg my-4"
-      />
+      /> 
+      */}
+      <div
+        className="w-full h-64 rounded-lg my-4"
+        style={{ backgroundColor: "#D5D5D5" }}
+      ></div>
 
-      <div className=" my-8 flex flex-col gap-2">
+      <div className="my-8 flex flex-col gap-2">
         <span className="font-bold text-lg">{blog.author}</span>
         <span className="text-gray-500 text-md">{blog.date}</span>
       </div>
@@ -86,13 +97,13 @@ export default function OneBlog() {
 
       {/* Blog Content */}
       <div
-        className="mt-4 text-xl  leading-9 text-right space-y-4"
+        className="mt-4 text-xl leading-9 text-right space-y-4"
         style={{ direction: "rtl", unicodeBidi: "plaintext" }}
       >
-        {blog.body.split(".").map((paragraph, index) =>
+        {blog.body.split("\n\n").map((paragraph, index) =>
           paragraph.trim() ? (
-            <p className="font-normal " key={index}>
-              {paragraph}.
+            <p className="font-normal" key={index}>
+              {paragraph}
             </p>
           ) : null
         )}

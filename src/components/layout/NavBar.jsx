@@ -39,7 +39,7 @@ export default function NavBar() {
                 to={"https://alkashaf.com"}
                 className="block rounded-3xl text-white px-5 py-2.5 text-sm font-medium transition hover:text-gray-200 border border-white"
               >
-                انتقل الى المعجم
+                انتقل إلى المعجم
               </Link>
             </div>
 
