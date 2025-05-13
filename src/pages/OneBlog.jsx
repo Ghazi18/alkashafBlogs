@@ -76,17 +76,19 @@ export default function OneBlog() {
       </div>
 
       {/* Image Placeholder */}
-      {/* 
-      <img
-        src={blog.image}
-        alt={blog.title}
-        className="w-full h-64 object-cover rounded-lg my-4"
-      /> 
-      */}
-      <div
-        className="w-full h-64 rounded-lg my-4"
-        style={{ backgroundColor: "#D5D5D5" }}
-      ></div>
+
+      {blog.image ? (
+        <img
+          src={blog.image}
+          alt={blog.title}
+          className="w-full h-64 object-cover rounded-lg my-4"
+        />
+      ) : (
+        <div
+          className="w-full h-64 rounded-lg my-4"
+          style={{ backgroundColor: "#D5D5D5" }}
+        ></div>
+      )}
 
       <div className="my-8 flex flex-col gap-2">
         <span className="font-bold text-lg">{blog.author}</span>

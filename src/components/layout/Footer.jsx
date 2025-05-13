@@ -80,7 +80,7 @@ export default function Footer() {
         <ul className="mt-12 flex justify-center gap-6 md:gap-8">
           <li>
             <a
-              href="#"
+              href="https://www.instagram.com/alkashafcom"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"
@@ -92,7 +92,7 @@ export default function Footer() {
 
           <li>
             <a
-              href="#"
+              href="https://x.com/alkashafcom"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"
@@ -104,7 +104,7 @@ export default function Footer() {
 
           <li>
             <a
-              href="#"
+              href="https://alkashaf.com/"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"
