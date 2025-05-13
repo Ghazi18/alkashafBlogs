@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/blog/:path*", "destination": "/blog/[id]" }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
